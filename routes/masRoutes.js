@@ -36,7 +36,7 @@ router.post('/messages', async (req, res) => {
     }
 
     // Validate message length
-    if (content.length < 10 || content.length > 2000) {
+    if (content.length < 3 || content.length > 2000) {
       return res.status(400).json({ error: 'Message must be between 10 and 2000 characters.' });
     }
 
